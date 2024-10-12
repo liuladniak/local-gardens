@@ -1,0 +1,111 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/mixins" as *;
+
+.vitrine {
+  // background-color: orangered;
+
+  &__desctiption {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 6rem;
+    &-text--1 {
+      font-family: "Saira", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: var(--color-black);
+    }
+
+    &-text--2 {
+      width: 35vw;
+      font-family: "Source Serif Pro", serif;
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__image {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(auto, 10rem));
+    grid-template-rows: repeat(8, minmax(auto, 10rem));
+    justify-content: center;
+    padding: 6rem;
+    padding-bottom: 0;
+    &--1 {
+      grid-column: 2 / 7;
+      grid-row: 1 / -1;
+      width: 100%;
+      z-index: 1;
+      filter: brightness(130%);
+    }
+
+    &--2 {
+      grid-column: 6 / 9;
+      grid-row: 2 / 5;
+      z-index: 2;
+      width: 100%;
+      filter: brightness(110%);
+      margin-left: 5rem;
+    }
+  }
+
+  &__selector {
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 5rem;
+    height: 5rem;
+    z-index: 100;
+    border-radius: 50%;
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+    position: relative;
+    animation: pulsate 1.4s ease-in-out infinite;
+    &::after {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      justify-self: center;
+      align-self: center;
+      content: "";
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      z-index: 20000;
+      background-color: rgb(255, 255, 255);
+    }
+
+    // &--1 {
+    //   grid-column: 5 / 6;
+    //   grid-row: 3 / 4;
+    // }
+    // &--2 {
+    // }
+    // &--3 {
+    // }
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    // box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}

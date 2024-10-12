@@ -1,0 +1,24 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/mixins" as *;
+
+.announcement-bar {
+  max-height: 6rem;
+  background-color: var(--color-primary-1);
+  text-align: center;
+
+  &__content {
+    padding: 6px 12px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-family: "Source Serif Pro", serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

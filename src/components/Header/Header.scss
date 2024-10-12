@@ -1,0 +1,91 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nav {
+  background-color: var(--color-white);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 4.3rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: "Source Serif Pro", serif;
+    font-size: 1.2rem;
+    font-weight: 350;
+    line-height: 3.4;
+    cursor: pointer;
+    color: #1c1f21;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+}
+.nav--container {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: absolute;
+  width: 100%;
+  transition: all 0.25s;
+}
+
+.logo {
+  &__container {
+    justify-content: center;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-family: "Source Serif Pro", serif;
+    line-height: 6rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    cursor: pointer;
+    letter-spacing: 1rem;
+  }
+}
+.sparkles {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.nav--secondary {
+  display: flex;
+  justify-content: end;
+  gap: 2.4rem;
+  margin: 0 3rem;
+}
+
+.btn {
+  &__search,
+  &__user,
+  &__shopping-cart {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-white);
+  background-color: transparent;
+}
+
+.nav--container:hover {
+  background-color: var(--color-white);
+  & > * .logo__link {
+    color: #1c1f21;
+  }
+  & > * .icon {
+    fill: #1c1f21;
+  }
+}
