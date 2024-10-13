@@ -1,0 +1,47 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.footer {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9rem;
+  font-family: "Garamond";
+
+  &__cols {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__heading {
+    font-size: 1.7rem;
+    font-family: "Lovelace";
+
+    font-weight: 300;
+  }
+
+  &__list {
+    &-item {
+      font-size: 1.6rem;
+      color: #1c1f21;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+  }
+}

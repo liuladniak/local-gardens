@@ -34,9 +34,18 @@ const Vitrine = () => {
         />
         <div className="vitrine__image-slider"></div>
         <img className="vitrine__image--2" src={img2} alt="" />
-        <span className="vitrine__selector"></span>
-        <span className="vitrine__selector--2"></span>
-        <span className="vitrine__selector--3"></span>
+        <div className="vitrine__selector vitrine__selector--1">
+          {/* <span>+</span> */}
+        </div>
+        <div className="vitrine__selector vitrine__selector--2">
+          {/* <span>+</span> */}
+        </div>
+        <div className="vitrine__selector vitrine__selector--3">
+          {/* <span>+</span> */}
+        </div>
+        <div className="vitrine__selector vitrine__selector--4">
+          {/* <span>+</span> */}
+        </div>
       </div>
     </section>
   );
